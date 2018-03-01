@@ -1,5 +1,6 @@
 var tab = document.getElementById('tab');
 var btn = document.getElementById('btn');
+var inp = document.getElementById('myinput');
 btn.addEventListener('click',function(){
 
     var req = new XMLHttpRequest();
@@ -24,14 +25,39 @@ function renderHTML(data)
     }
     else
     {
-        htmlString+="<p>No more Data left</p>"
+        htmlString+="<p>Now you can start filtering</p>"
     }
   
      
     tab.insertAdjacentHTML('beforeend' , htmlString);
 
-
-
 }
 
+//filter
+
+inp.addEventListener('keyup' , function(){
+    var tab = document.getElementById('tab');
+  var row = tab.getElementsByTagName('tr');
+  var inp = document.getElementById('myinput');
+
+  console.log("reche");
+  var i;
+  
+  for(i =0 ; i< row.length ; i++)
+  {
+      var td = row[i].getElementsByTagName('td')[0];
+      if(td)
+      {
+          if(td.innerHTML.indexOf(inp.value)!= -1)
+          {
+              row[i].style.display = "";
+          }
+          else
+          {
+            row[i].style.display = "none";
+          }
+      } 
+  }
+
+});
 

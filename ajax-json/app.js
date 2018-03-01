@@ -13,20 +13,16 @@ btn.addEventListener('click',function(){
     req.send();
 
 });
-var i=0;
+
 function renderHTML(data)
 {
     var htmlString = "";
-    
-    if(i<data.length)
+    var i ; 
+    for(i = 0 ; i<data.length ; i++)
     {
         htmlString+= "<tr><td>" +data[i].name+ "</td><td>" + data[i].email+ "</td></tr>";
-      i++;
     }
-    else
-    {
-        htmlString+="<p>Now you can start filtering</p>"
-    }
+   
   
      
     tab.insertAdjacentHTML('beforeend' , htmlString);
@@ -40,7 +36,7 @@ inp.addEventListener('keyup' , function(){
   var row = tab.getElementsByTagName('tr');
   var inp = document.getElementById('myinput');
 
-  console.log("reche");
+  
   var i;
   
   for(i =0 ; i< row.length ; i++)

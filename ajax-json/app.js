@@ -7,7 +7,7 @@ function index()
 {
     var k ;
 
-if(sel.value==name)
+if(sel.value=="name")
 {
   k = 0;
 }
@@ -15,11 +15,10 @@ else
 {
     k=1;
 }
-
 return k;
 }
 
-
+index();
 
 btn.addEventListener('click',function(){
 
@@ -42,10 +41,9 @@ function renderHTML(data)
     {
         htmlString+= "<tr><td>" +data[i].name+ "</td><td>" + data[i].email+ "</td></tr>";
     }
-   
-  
      
     tab.insertAdjacentHTML('beforeend' , htmlString);
+    btn.style.display = "none";
 
 }
 

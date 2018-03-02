@@ -1,6 +1,26 @@
 var tab = document.getElementById('tab');
 var btn = document.getElementById('btn');
 var inp = document.getElementById('myinput');
+var sel = document.getElementById('sel');
+
+function index()
+{
+    var k ;
+
+if(sel.value==name)
+{
+  k = 0;
+}
+else
+{
+    k=1;
+}
+
+return k;
+}
+
+
+
 btn.addEventListener('click',function(){
 
     var req = new XMLHttpRequest();
@@ -35,16 +55,16 @@ inp.addEventListener('keyup' , function(){
     var tab = document.getElementById('tab');
   var row = tab.getElementsByTagName('tr');
   var inp = document.getElementById('myinput');
-
+  var fil = inp.value.toLowerCase();
   
   var i;
   
   for(i =0 ; i< row.length ; i++)
   {
-      var td = row[i].getElementsByTagName('td')[0];
+      var td = row[i].getElementsByTagName('td')[index()];
       if(td)
       {
-          if(td.innerHTML.indexOf(inp.value)!= -1)
+          if(td.innerHTML.toLowerCase().indexOf(fil)!= -1)
           {
               row[i].style.display = "";
           }

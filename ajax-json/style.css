@@ -46,10 +46,21 @@ button
 }
 
 input{
-    width: 100%;
+    
+  
+
+}
+.up 
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     height: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 2%;
-    box-shadow:0 0 10px 0 black;
     margin-bottom: 30px;
+}
+
+.up select
+{
+    border-radius:10%;
+    background: white;
 }

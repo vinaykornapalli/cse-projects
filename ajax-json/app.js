@@ -23,7 +23,7 @@ index();
 btn.addEventListener('click',function(){
 
     var req = new XMLHttpRequest();
-    req.open('GET' , 'file.json');
+    req.open('GET' , "http://127.0.0.1:5500/file.json");
     req.onload = function(){
         var data = JSON.parse(req.responseText);
         console.log(data);

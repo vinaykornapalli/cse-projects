@@ -11,13 +11,19 @@
     box-shadow: 0 0 10px 0 black;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 50px;
+    padding-bottom:50px;
 
 }
-
+#info , #loggedout
+{
+    display: none;
+}
 #button
 {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
 #image
@@ -25,5 +31,17 @@
     height: 200px;
     width:200px;
     border-radius: 50%;
-    
+
+}
+
+button
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius: 2%;
+    color: white;
+    background: rgb(71, 71, 243);
+    height: 50px;
+    font-size: 20px;
 }

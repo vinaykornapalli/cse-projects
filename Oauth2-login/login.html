@@ -14,13 +14,16 @@
 </head>
 <body>
   <div class="main">
-      <div class="g-signin2" data-onsuccess="onSignIn" id="button"></div>
+      <div class="g-signin2" data-onsuccess="onSignIn" id="button">sign-in</div>
       <div id="info">
-          <h2 id="username">vinay</h2>
+          <h2 id="username"></h2>
           <img id="image" src="" style="">
-          <p id="email">fff</p>
+          <p id="email"></p>
+          <button onclick="signOut" >sign out</button>
+          
       </div>
 
+      <p id="loggedout">Successfully logged out</p>
   </div>
   
 
